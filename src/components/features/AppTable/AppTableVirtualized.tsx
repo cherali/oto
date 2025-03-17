@@ -77,7 +77,7 @@ function AppTableVirtualized<T>({ rows }: { rows: RowModel<T> }) {
               <DialogDescription>Line Chart: `{value}`</DialogDescription>
             </DialogHeader>
             <div className="grid gap-4 py-4">
-              <AppLineChart
+              <AppLineChart<T>
                 data={rows.rows.map(row => row.original)}
                 dataKey={value}
               />

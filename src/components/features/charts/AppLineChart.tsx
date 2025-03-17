@@ -9,13 +9,17 @@ import {
   XAxis,
 } from "recharts";
 
-type AppLineChartProps = {
-  data: any[];
+type AppLineChartProps<T> = {
+  data: T[];
   dataKey: string;
   height?: number;
 };
 
-function AppLineChart({ data, dataKey, height = 400 }: AppLineChartProps) {
+function AppLineChart<T>({
+  data,
+  dataKey,
+  height = 400,
+}: AppLineChartProps<T>) {
   return (
     <div style={{ width: "100%", height }}>
       <ResponsiveContainer>
