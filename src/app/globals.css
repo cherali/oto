@@ -119,4 +119,35 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .--column-text {
+    @apply hidden;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .-flag {
+      direction: rtl;
+    }
+
+    .--column-text {
+      @apply inline-block;
+    }
+    th[data-slot="table-head"] {
+      margin: 0 !important;
+      padding-top: 0.5rem !important;
+      padding-bottom: 0 !important;
+      &:not(:has(> button[aria-label="Select all"])) {
+        display: none !important;
+      }
+    }
+    [data-slot="table-body"] [data-slot="table-row"] {
+      display: flex !important;
+      flex-direction: column !important;
+    }
+
+    [data-slot="table-row"] [data-slot="table-cell"] {
+      width: 100% !important;
+      max-width: calc(100vw - 1rem);
+    }
+  }
 }
