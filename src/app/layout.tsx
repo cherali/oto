@@ -21,7 +21,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" dir="ltr" className={`${poppinsFont.variable} antialiased`}>
+    <html
+      lang="en"
+      dir="ltr"
+      className={`${poppinsFont.variable} antialiased dark`}
+    >
       <body>{children}</body>
     </html>
   );
