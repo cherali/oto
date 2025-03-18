@@ -150,4 +150,15 @@
       max-width: calc(100vw - 1rem);
     }
   }
+
+  @media only screen and (max-width: 639px) and (min-width: 405px) {
+    .--select-field {
+      width: 24rem !important;
+    }
+  }
+  @media only screen and (max-width: 404px) {
+    .--select-field {
+      width: calc(100vw - 1rem) !important;
+    }
+  }
 }

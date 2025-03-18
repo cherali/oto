@@ -61,7 +61,7 @@ function AppTable<T>({ columns, data }: AppTableProps<T>) {
 
   return (
     <div className="w-full" style={{ ...columnSizeVars }}>
-      <div className="flex items-center py-4 gap-2">
+      <div className="flex items-center py-4 gap-2 max-md:flex-col">
         <Input
           placeholder="Filter Countries..."
           value={(table.getColumn("name")?.getFilterValue() as string) ?? ""}

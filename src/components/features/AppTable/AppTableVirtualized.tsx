@@ -35,10 +35,10 @@ function AppTableVirtualized<T>({ rows }: { rows: RowModel<T> }) {
   };
 
   return (
-    <>
+    <div className="flex gap-2 max-sm:flex-col max-sm:px-4 max-md:flex-row">
       <div className="flex items-center gap-1">
         <Select value={value} onValueChange={setValue}>
-          <SelectTrigger className="w-[180px]">
+          <SelectTrigger className="w-[calc(24rem-104px)] --select-field">
             <SelectValue placeholder="Select field" />
           </SelectTrigger>
           <SelectContent>
@@ -56,6 +56,7 @@ function AppTableVirtualized<T>({ rows }: { rows: RowModel<T> }) {
               <TooltipTrigger asChild>
                 <div>
                   <Button
+                    className="max-sm:w-full"
                     onClick={handleClick}
                     disabled={rows.rows.length === 0 || !value}
                   >
@@ -85,7 +86,7 @@ function AppTableVirtualized<T>({ rows }: { rows: RowModel<T> }) {
           </DialogContent>
         </Dialog>
       </TooltipProvider>
-    </>
+    </div>
   );
 }
 
